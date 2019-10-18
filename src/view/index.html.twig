@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+{% block title %} {{ 'Produits proposés' }} {% endblock %}
+{% block content %}
+    <div class="container-fluid" style="border: 1px solid silver; height:60px;">
+
+        <div class="row" style="height: 100px"></div>
+
+        <div class="row">
+
+            {% for product in products %}
+                 <div class="col-4">
+                    <div class="card-group ">
+                        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+                                <h5 class="card-title">{{ product}}</h5>
+                                <p class="card-text">{{product}}</p>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            {% endfor %}
+        </div>
+{%  endblock content %}
